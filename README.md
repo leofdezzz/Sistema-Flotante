@@ -1,12 +1,12 @@
 # Sistema Flotante
 
-Proyecto de MicroPython para Raspberry Pi Pico que controla un **aerogenerador flotante** dentro de un tanque de agua. Ocho ventiladores simulan viento desde distintas direcciones, y el sistema busca automáticamente la posición óptima donde el aire pasa a través de un hueco en una pared, maximizando la generación de voltaje.
+Proyecto de MicroPython compatible con **Raspberry Pi Pico** y **BBC micro:bit** que controla un **aerogenerador flotante** dentro de un tanque de agua. Ocho ventiladores simulan viento desde distintas direcciones, y el sistema busca automáticamente la posición óptima donde el aire pasa a través de un hueco en una pared, maximizando la generación de voltaje.
 
 ## Hardware
 
 | Componente | Descripción |
 |---|---|
-| **MCU** | Raspberry Pi Pico (MicroPython) |
+| **MCU** | Raspberry Pi Pico o BBC micro:bit (MicroPython) |
 | **Servos** | 2x MG996R 360° rotación continua (ejes X e Y) |
 | **Ventiladores** | 8 unidades controladas por relés (activo alto) |
 | **Sensor** | ADC en GP26 — lectura de voltaje del aerogenerador |
@@ -109,12 +109,20 @@ Bucle principal (main)
 | `test_eje_xy.py` | Ambos ejes: movimiento independiente y búsqueda dual |
 | `test_ventiladores.py` | Relés: individual, pares opuestos, todos, secuencia circular |
 
-Para ejecutar un test, cópialo como `main.py` al Pico:
+Para ejecutar un test, cópialo como `main.py` al microcontrolador:
 
+**Raspberry Pi Pico:**
 ```bash
 mpremote connect auto cp test_eje_x.py :main.py
 mpremote connect auto reset
 ```
+
+**BBC micro:bit:**
+```bash
+ufs put test_eje_x.py main.py
+```
+
+> **Nota:** En micro:bit los pines GPIO son diferentes. Es necesario adaptar la asignación de pines en la sección de configuración según el pinout de tu placa.
 
 ## Parámetros calibrables
 
