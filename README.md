@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="docs/banner.png" alt="Floating Farm Banner" width="600">
-</p>
-
 <h1 align="center">Floating Farm</h1>
 
 <p align="center">
@@ -10,6 +6,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/plataforma-Raspberry%20Pi%20Pico-C51A4A?style=flat-square&logo=raspberrypi&logoColor=white" alt="Pico">
+  <img src="https://img.shields.io/badge/plataforma-BBC%20micro:bit-00ED00?style=flat-square&logo=micro:bit&logoColor=white" alt="micro:bit">
   <img src="https://img.shields.io/badge/lenguaje-MicroPython-2b5b84?style=flat-square&logo=python&logoColor=white" alt="MicroPython">
   <img src="https://img.shields.io/badge/motores-28BYJ--48-orange?style=flat-square" alt="Stepper">
   <img src="https://img.shields.io/badge/licencia-MIT-green?style=flat-square" alt="MIT">
@@ -46,7 +43,7 @@ Maqueta educativa que simula un aerogenerador flotante dentro de un tanque de ag
 
 | Componente | Modelo | Cantidad | Función |
 |:---:|:---:|:---:|:---|
-| 🔧 MCU | Raspberry Pi Pico | 1 | Controlador principal |
+| 🔧 MCU | Raspberry Pi Pico / BBC micro:bit | 1 | Controlador principal |
 | ⚙️ Motores | 28BYJ-48 + ULN2003 | 2 | Posicionamiento ejes X e Y |
 | 💨 Ventiladores | — | 8 | Simulan viento desde 8 direcciones |
 | 📡 Relés | Módulo 8 canales | 1 | Control ON/OFF de ventiladores |
